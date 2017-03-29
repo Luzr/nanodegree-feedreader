@@ -24,5 +24,5 @@ The tests that are ran against index.html are in the feedreader.js file located 
 - The loadFeed function loads new content.
 
 
-  [1]: https://i.imgur.com/net1Pxb.png
+  [1]: https://i.imgur.com/uGgbtf1.png
   [2]: https://i.imgur.com/M3z7zss.png

@@ -60,11 +60,12 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        var body = $('body');
+        var navicon = $('.menu-icon-link');
 
         it('is hidden by default', function() {
-            var body = document.body;
-
-            expect(body.classList).toContain('menu-hidden');
+            
+            expect($('body').hasClass('menu-hidden')).toEqual(true)
         });
 
         /* TODO: Write a test that ensures the menu changes
@@ -73,14 +74,21 @@ $(function() {
          * clicked and does it hide when clicked again.
          */
 
-        it('changes visibility when the menu icon is clicked', function() {
-            var $body = $('body')[0];
-            var $menu = $('.menu-icon-link')[0];
+        // it('changes visibility when the menu icon is clicked', function() {
+        //     var $body = $('body')[0];
+        //     var $menu = $('.menu-icon-link')[0];
 
-            $menu.click();
-            expect($body.className).toEqual('');
-            $menu.click();
-            expect($body.className).toEqual('menu-hidden');
+        //     $menu.click();
+        //     expect($body.className).toEqual('');
+        //     $menu.click();
+        //     expect($body.className).toEqual('menu-hidden');
+
+        it('changes visibility when the menu icon is clicked', function() {
+
+            navicon.click();
+            expect($('body').hasClass('menu-hidden')).toEqual(false);
+            navicon.click();
+            expect($('body').hasClass('menu-hidden')).toEqual(true);
         });
     });
 
@@ -99,10 +107,9 @@ $(function() {
          */
 
         it('completed its work, there is at least a single .entry element within the .feed container', function(done) {
-            var entryElement = document.getElementsByClassName('entry');
-            var entryElementLength = entryElement.length;
-
-            expect(entryElementLength).toBeGreaterThan(0);
+            var entryElement = $('.entry').length;
+            
+            expect(entryElement).toBeGreaterThan(0);
             done();
         });
     });
