@@ -26,6 +26,7 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+        
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds).not.toBe(0);
@@ -42,6 +43,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+
         it('is hidden by default', function() {
             var body = document.body;
 
@@ -79,6 +81,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+
         it('completed its work, there is at least a single .entry element within the .feed container', function(done) {
             var entryElement = document.getElementsByClassName('entry');
             var entryElementLength = entryElement.length;
@@ -108,6 +111,7 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
         it('is loaded by the loadFeed function - content actually changed', function(){
             expect(oldFeedContent).not.toBe(loadedFeedContent);
         });
