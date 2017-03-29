@@ -7,16 +7,16 @@ In this project you are given a web-based application that reads RSS feeds. The 
 View a live version [here](https://luzr.github.io/nanodegree-feedreader/) (make sure to load unsafe scripts).
 
 ## How to run
-Clone or download the .zip repo to your desktop and index.html.
+Clone or download the .zip repo to your desktop and run index.html.
 
-- Scroll to the bottom of the page and look for specs bar It should be green and say "5 specs, 0 failures". 
+- Scroll to the bottom of the page and look for specs bar. It should be green and say "5 specs, 0 failures". 
 ![passing test][1]
 
-- If there are any failures there will be a red bar and it will say how many failures in it. 
+- If there are any failures there will be a red bar and it will say how many failures have occurred. 
  - If there are any failures read the error below the test suite to see what’s causing it ![failing test][2]
 
 ## Tests
-The tests that are run against index.html are in the feedreader.js file in \jasmine\spec\ folder.
+The tests that are ran against index.html are in the feedreader.js file located in \jasmine\spec\ folder.
 
 - The allFeeds variable isn't empty and is defined.
 - The menu element is hidden by default and will change when clicked.
