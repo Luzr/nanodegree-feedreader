@@ -29,10 +29,28 @@ $(function() {
         
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
-            expect(allFeeds).not.toBe(0);
             expect(allFeeds.length).not.toBe(0);
         });
 
+        it('have valid urls that arent empty', function() {
+            for(var i = 0; i < allFeeds.length; i++){
+                var feedUrl = allFeeds[i].url;
+                var lengthUrl = allFeeds[i].url.length;
+
+                expect(feedUrl).toBeDefined();
+                expect(lengthUrl).toBeGreaterThan(0);
+            };
+        });
+
+        it('doesnt have empty names', function(){
+            for(var i =- 0; i < allFeeds.length; i++){
+                var feedName = allFeeds[i].url;
+                var lengthName = allFeeds[i].url.length;
+
+                expect(feedName).toBeDefined();
+                expect(lengthName).toBeGreaterThan(0);
+            }
+        });
     });
 
 
@@ -56,7 +74,7 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-        it('changes visibility when the menu icon is clicked',function() {
+        it('changes visibility when the menu icon is clicked', function() {
             var $body = $('body')[0];
             var $menu = $('.menu-icon-link')[0];
 
